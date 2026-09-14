@@ -1,0 +1,25 @@
+/* High contrast focus ring for keyboard navigation accessibility (WCAG 2.2) */
+.form-control:focus,
+.form-select:focus,
+.btn:focus {
+  outline: 3px solid #0d6efd !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+}
+
+/* Ensure label fonts and star indicators are prominent */
+label.form-label {
+  color: #212529;
+  font-size: 0.95rem;
+}
+
+/* Styling help text for high readability */
+.form-text {
+  color: #495057;
+  font-size: 0.85rem;
+}
+
+/* Custom header styling adjustments */
+header {
+  border-bottom: 3px solid #0d6efd;
+}
