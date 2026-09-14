@@ -67,24 +67,76 @@
                         <h1 class="h3 mb-0">Add Announcement</h1>
                     </div>
                     <div class="card-body p-4">
+
                         <!-- Instruction Banner -->
+                        <p class="text-muted mb-4">
+                            Complete the form below to schedule or publish a new announcement to registered EduMax users. Fields marked with an asterisk (<span class="text-danger">*</span>) are required.
+                        </p>
 
                         <!-- Form -->
+                        <form action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php" method="POST" enctype="multipart/form-data" novalidate>
+                        
+                            <!-- Hidden Field -->
+                            <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
 
-                        <!-- Hidden Field -->
+                            <!-- Subject Line -->
+                            <div class="mb-3">
+                                <label for="subject_line" class="form-label fw-bold">Subject Line <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="subject_line" name="subject_line" value="e.g. Exams revision timetable released" aria-describedby="subjectHelp" required>
+                                <div id="subjectHelp" class="form-text">Maximum of five words.</div>
+                            </div>
 
-                        <!-- Subject Line -->
+                            <!-- Sender Details -->
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="sender_name" class="form-label fw-bold">Sender's Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="sender_name" name="sender_name" value="e.g. Safa Smith" required>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="sender_role" class="form-label fw-bold">Sender's Role <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="sender_role" name="sender_role" required>
+                                        <option value="module lead" selected>Module Lead</option>
+                                        <option value="administrator">Administrator</option>
+                                        <option value="module assistant">Module Assistant</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                        <!-- Sender Details -->
+                            <!-- Scheduling & Priority -->
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="send_datetime" class="form-label fw-bold">Date and Time to Send <span class="text-danger">*</span></label>
+                                    <input type="datetime-local" class="form-control" id="send_datetime" name="send_datetime" value="2026-10-01T09:00" required>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="priority" class="form-label fw-bold">Priority <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="priority" name="priority" required>
+                                        <option value="High">High</option>
+                                        <option value="Normal" selected>Normal</option>
+                                        <option value="Low">Low</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                        <!-- Scheduling & Priority -->
+                            <!-- Attachment Upload -->
+                            <div class="mb-3">
+                               <label for="attachment" class="form-label fw-bold">Attachment (Optional)</label>
+                                <input type="file" class="form-control" id="attachment" name="attachment" aria-describedby="attachmentHelp">
+                               <div id="attachmentHelp" class="form-text">Allowed formats: PDF, JPG, PNG (Max file size: 2MB).</div>
+                            </div>
 
-                        <!-- Attachment Upload -->
+                            <!-- Announcement Content -->
+                            <div class="mb-4">
+                                <label for="content" class="form-label fw-bold">Announcement Content <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="content" name="content" rows="6" required>e.g. The revision timetable for the upcoming module examinations is now available on your student portal. Please check your assigned exam room and timetable details carefully.</textarea>
+                            </div>
 
-                        <!-- Announcement Content -->
-
-                        <!-- Form Controls -->
-                        <form>
+                            <!-- Form Controls -->
+                            <div class="d-flex flex-wrap align-items-center gap-2 pt-3 border-top">
+                                <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold">Publish Announcement</button>
+                                <button type="button" class="btn btn-outline-secondary px-4 py-2">Save as Draft</button>
+                                <a href="#" class="btn btn-link text-decoration-none ms-auto">Cancel</a>
+                            </div>
                             
                         </form>
                     </div>
