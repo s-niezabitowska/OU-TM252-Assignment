@@ -82,7 +82,7 @@
                             <!-- Subject Line -->
                             <div class="mb-3">
                                 <label for="subject_line" class="form-label fw-bold">Subject Line <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="subject_line" name="subject_line" value="e.g. Exams revision timetable released" aria-describedby="subjectHelp" required>
+                                <input type="text" class="form-control" id="subject_line" name="subject_line" value="Exams revision timetable released" aria-describedby="subjectHelp" required>
                                 <div id="subjectHelp" class="form-text">Maximum of five words.</div>
                             </div>
 
@@ -90,11 +90,12 @@
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="sender_name" class="form-label fw-bold">Sender's Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="sender_name" name="sender_name" value="e.g. Safa Smith" required>
+                                    <input type="text" class="form-control" id="sender_name" name="sender_name" value="Safa Smith" required>
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="sender_role" class="form-label fw-bold">Sender's Role <span class="text-danger">*</span></label>
                                     <select class="form-select" id="sender_role" name="sender_role" required>
+                                        <option value="">Select a role...</option>
                                         <option value="module lead" selected>Module Lead</option>
                                         <option value="administrator">Administrator</option>
                                         <option value="module assistant">Module Assistant</option>
@@ -111,6 +112,7 @@
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="priority" class="form-label fw-bold">Priority <span class="text-danger">*</span></label>
                                     <select class="form-select" id="priority" name="priority" required>
+                                        <option value="">Select priority...</option>
                                         <option value="High">High</option>
                                         <option value="Normal" selected>Normal</option>
                                         <option value="Low">Low</option>
@@ -128,7 +130,7 @@
                             <!-- Announcement Content -->
                             <div class="mb-4">
                                 <label for="content" class="form-label fw-bold">Announcement Content <span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="content" name="content" rows="6" required>e.g. The revision timetable for the upcoming module examinations is now available on your student portal. Please check your assigned exam room and timetable details carefully.</textarea>
+                                <textarea class="form-control" id="content" name="content" rows="6" required>The revision timetable for the upcoming module examinations is now available on your student portal. Please check your assigned exam room and timetable details carefully.</textarea>
                             </div>
 
                             <!-- Form Controls -->
